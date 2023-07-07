@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --action list",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/Skaart77/node.js.git"
+  },
+  "author": "Serhii Skliarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skaart77/node.js"
+  },
+  "homepage": "https://github.com/Skaart77/node.js",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "nanoid": "^3.3.6",
+    "nodemon": "^2.0.22"
+  }
+}
