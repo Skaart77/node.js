@@ -50,4 +50,21 @@ const addContact = async (data) => {
   // ...твій код. Повертає об'єкт доданого контакту.
 };
 
-module.exports = { listContacts, getContactById, removeContact, addContact };
+const updateContact = async (contactId, data) => {
+  const contacts = await listContacts();
+  const index = contacts.findIndex((item) => item.contactId === contactId);
+  if (index === -1) {
+    return null;
+  }
+  contacts[index] = { id, ...data };
+  await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+  return contacts[index];
+};
+
+module.exports = {
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
+  updateContact,
+};
